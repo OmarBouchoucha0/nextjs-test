@@ -25,10 +25,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <Navbar />
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
+                <Navbar />
+                <div className="bg-red-500 p-4 text-white">Test Tailwind (should be red)</div>
                 {children}
             </body>
         </html >
