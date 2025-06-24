@@ -39,50 +39,54 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="w-full space-y-2">
-                <h2 className="text-2xl font-bold text-start px-15">
-                    New
+            <div className="w-full space-y-2 pt-5">
+                <h2 className="text-2xl font-bold text-start px-5 ml-15">
+                    NEW
                 </h2>
-                <Carousel className="w-full max-w-s px-15">
-                    <CarouselContent className="-ml-1">
-                        {Array.from({ length: 7 }).map((_, index) => (
-                            <CarouselItem key={index} className="pl-1 lg:basis-1/5">
-                                <div className="p-1">
-                                    <Card>
-                                        <CardContent className="flex aspect-square items-center justify-center p-4">
-                                            <span className="text-2xl font-semibold">{index + 1}</span>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
+                <div className="flex justify-center">
+                    <Carousel className="w-full mx-15 max-w-9/10 ">
+                        <CarouselContent className="-ml-1">
+                            {Array.from({ length: 7 }).map((_, index) => (
+                                <CarouselItem key={index} className="pl-1 lg:basis-1/6">
+                                    <div className="p-1">
+                                        <Card>
+                                            <CardContent className="flex aspect-square items-center justify-center p-4">
+                                                <span className="text-2xl font-semibold">{index + 1}</span>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="cursor-pointer" />
+                        <CarouselNext className="cursor-pointer" />
+                    </Carousel>
+                </div>
             </div>
 
             <div className="w-full space-y-2">
                 <h2 className="text-2xl font-bold text-start px-5">
                     Featured Sneakers
                 </h2>
-                <Carousel className="w-full max-w-l px-5">
-                    <CarouselContent className="-ml-1">
-                        {Array.from({ length: 7 }).map((_, index) => (
-                            <CarouselItem key={index} className="pl-1 lg:basis-1/5">
-                                <div className="p-1">
-                                    <Card>
-                                        <CardContent className="flex aspect-square items-center justify-center p-4">
-                                            <span className="text-2xl font-semibold">{index + 1}</span>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
+                <div className="flex justify-center">
+                    <Carousel className="w-full mx-15 max-w-9/10">
+                        <CarouselContent className="-ml-1">
+                            {Array.from({ length: 7 }).map((_, index) => (
+                                <CarouselItem key={index} className="pl-1 lg:basis-1/6">
+                                    <div className="p-1">
+                                        <Card>
+                                            <CardContent className="flex aspect-square items-center justify-center p-4">
+                                                <span className="text-2xl font-semibold">{index + 1}</span>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="cursor-pointer" />
+                        <CarouselNext className="cursor-pointer" />
+                    </Carousel>
+                </div>
             </div>
         </main>
     );
