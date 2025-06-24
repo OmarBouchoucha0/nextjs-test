@@ -40,10 +40,10 @@ export default function Home() {
             </div>
 
             <div className="w-full space-y-2">
-                <h2 className="text-2xl font-bold text-start px-5">
+                <h2 className="text-2xl font-bold text-start px-15">
                     New
                 </h2>
-                <Carousel className="w-full max-w-l px-5">
+                <Carousel className="w-full max-w-s px-15">
                     <CarouselContent className="-ml-1">
                         {Array.from({ length: 7 }).map((_, index) => (
                             <CarouselItem key={index} className="pl-1 lg:basis-1/5">

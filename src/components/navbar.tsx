@@ -10,7 +10,7 @@ import { Search, User, Heart, ShoppingCart } from "lucide-react";
 
 export default function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xs transition-all hover:bg-white/100 border-b">
+        <nav className="sticky top-0 z-50 bg-white/80 transition-all hover:bg-white/100 border-b">
             <div aria-describedby="this is the navigation bar" className="flex justify-between items-center  h-[4vw]">
                 <div className="order-1 p-4 items-center">
 
