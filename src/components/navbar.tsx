@@ -15,6 +15,16 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
@@ -132,15 +142,55 @@ export default function Navbar() {
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
-                                    <Heart />
-                                </NavigationMenuLink>
+                                <Sheet>
+                                    <SheetTrigger asChild>
+                                        <Button variant="ghost">
+                                            <Heart />
+                                        </Button>
+                                    </SheetTrigger>
+                                    <SheetContent>
+                                        <SheetHeader>
+                                            <SheetTitle className="text-3xl">Wishlist</SheetTitle>
+                                        </SheetHeader>
+                                        <div className="grid flex-1 auto-rows-min gap-6 px-4 items-center">
+                                            <div className="grid gap-3 border-t-black justify-center">
+                                                Wishlist Is Currently Empty
+                                            </div>
+                                        </div>
+                                        <SheetFooter className="border-t-black">
+                                            <Button type="submit">Add All To Cart</Button>
+                                            <SheetClose asChild>
+                                                <Button variant="outline">Close</Button>
+                                            </SheetClose>
+                                        </SheetFooter>
+                                    </SheetContent>
+                                </Sheet>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
-                                    <ShoppingCart />
-                                </NavigationMenuLink>
+                                <Sheet>
+                                    <SheetTrigger asChild>
+                                        <Button variant="ghost">
+                                            <ShoppingCart />
+                                        </Button>
+                                    </SheetTrigger>
+                                    <SheetContent>
+                                        <SheetHeader>
+                                            <SheetTitle className="text-3xl">Cart</SheetTitle>
+                                        </SheetHeader>
+                                        <div className="grid flex-1 auto-rows-min gap-6 px-4 items-center">
+                                            <div className="grid gap-3 border-t-black justify-center">
+                                                Nothing Currently In Cart
+                                            </div>
+                                        </div>
+                                        <SheetFooter className="border-t-black">
+                                            <Button type="submit">Check Out</Button>
+                                            <SheetClose asChild>
+                                                <Button variant="outline">Close</Button>
+                                            </SheetClose>
+                                        </SheetFooter>
+                                    </SheetContent>
+                                </Sheet>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
