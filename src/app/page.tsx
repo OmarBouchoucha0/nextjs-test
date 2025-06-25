@@ -21,18 +21,20 @@ export default function Home() {
                     priority
                     quality={100}
                 />
-                <div className="absolute inset-0 bg-black/30 flex flex-col items-start justify-center px-8">
-                    <div className="space-y-4">
-                        <h1 className="text-white text-3xl sm:text-4xl font-bold">New Drops!</h1>
-                        <h2 className="text-white text-4xl sm:text-5xl font-bold">
-                            EVERYTHING UNDER 200DT
+                <div className="absolute inset-0 bg-black/30 flex flex-col items-start justify-center px-20">
+                    <div className="space-y-4 bg-white p-8 rounded-s shadow-accent-foreground w-full max-w-1/4">
+                        <h1 className="text-black text-4xl  font-bold">
+                            New Collection
+                        </h1>
+                        <h2 className="text-gray-500 text-xl font-ligth">
+                            The pieces everyone wants right now.
                         </h2>
                         <Button
                             asChild
-                            className="mt-4 bg-white text-black rounded-xs hover:scale-105 hover:bg-white"
+                            className="rounded-s mt-4 h-12"
                         >
                             <Link href="#">
-                                SHOP NOW
+                                Discover
                             </Link>
                         </Button>
                     </div>
