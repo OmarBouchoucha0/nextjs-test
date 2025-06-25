@@ -4,7 +4,19 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-
+import { FcGoogle } from "react-icons/fc"; // Google's G logo
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Search, User, Heart, ShoppingCart } from "lucide-react";
 
@@ -56,10 +68,67 @@ export default function Navbar() {
                 </div>            <div className="order-3 p-4">
                     <NavigationMenu className="max-w-full p-2">
                         <NavigationMenuList className="gap-2">
-                            <NavigationMenuItem className='h-[28px] w-[28px]'>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
-                                    <User />
-                                </NavigationMenuLink>
+                            <NavigationMenuItem >
+                                <Dialog>
+                                    <form>
+                                        <DialogTrigger asChild>
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                className="hover:bg-gray-200 rounded-lg"
+                                            >
+                                                <User className="h-5 w-5" />
+                                            </Button>
+                                        </DialogTrigger>
+                                        <DialogContent >
+
+                                            <DialogHeader>
+                                                <div className="flex items-center justify-between w-full py-2">
+                                                    <DialogTitle className="mb-0">Login to your account</DialogTitle>
+                                                    <Button variant="link" className="p-0 h-auto cursor-pointer">
+                                                        Sign Up
+                                                    </Button>
+                                                </div>
+
+                                            </DialogHeader>
+
+                                            <div className="grid gap-4">
+                                                <div className="grid gap-3">
+                                                    <Label htmlFor="email">Email</Label>
+                                                    <Input
+                                                        id="email"
+                                                        type="email"
+                                                        placeholder="m@example.com"
+                                                        required
+                                                    />
+                                                </div>
+                                                <div className="grid gap-3">
+                                                    <div className="flex items-center">
+                                                        <Label htmlFor="password">Password</Label>
+                                                        <a
+                                                            href="#"
+                                                            className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                                                        >
+                                                            Forgot your password?
+                                                        </a>
+                                                    </div>
+                                                    <Input id="password" type="password" required />
+                                                </div>
+                                            </div>
+                                            <DialogFooter className="w-full ">
+                                                <div className="w-full space-y-3 ">
+                                                    <Button type="submit" className="w-full cursor-pointer">
+                                                        Login
+                                                    </Button>
+                                                    <Button variant="outline" className="w-full border border-black cursor-pointer">
+                                                        <FcGoogle className="text-lg" />
+                                                        Login with Google
+                                                    </Button>
+                                                </div>
+                                            </DialogFooter>
+                                        </DialogContent>
+                                    </form>
+                                </Dialog>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
