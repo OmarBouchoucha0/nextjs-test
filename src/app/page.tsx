@@ -62,24 +62,26 @@ export default function Home() {
                                     >
                                         <div className="p-1 md:p-2">
                                             <Card className="border-none shadow-none cursor-pointer ">
-                                                <CardContent className="flex flex-col p-2">
-                                                    <div className="relative aspect-[4/3] w-full mb-2 rounded-lg overflow-hidden">
-                                                        <Image
-                                                            src="/nikeAF1.jpg"
-                                                            alt={`Nike Air Force 1 ${index + 1}`}
-                                                            fill
-                                                            className="object-cover hover:scale-105 transition-transform duration-300"
-                                                            priority={index < 3}
-                                                            quality={75}
-                                                        />
-                                                    </div>
+                                                <Link href="/product/1">
+                                                    <CardContent className="flex flex-col p-2">
+                                                        <div className="relative aspect-[4/3] w-full mb-2 rounded-lg overflow-hidden">
+                                                            <Image
+                                                                src="/nikeAF1.jpg"
+                                                                alt={`Nike Air Force 1 ${index + 1}`}
+                                                                fill
+                                                                className="object-cover hover:scale-105 transition-transform duration-300"
+                                                                priority={index < 3}
+                                                                quality={75}
+                                                            />
+                                                        </div>
 
-                                                    <div className="text-start">
-                                                        <h3 className="font-medium text-sm md:text-base">Nike Air Force 1</h3>
-                                                        <p className="text-gray-600 text-xs md:text-sm">Classic White</p>
-                                                        <p className="font-bold text-sm md:text-base">{(120 + index * 10).toFixed(2)}DT</p>
-                                                    </div>
-                                                </CardContent>
+                                                        <div className="text-start">
+                                                            <h3 className="font-medium text-sm md:text-base">Nike Air Force 1</h3>
+                                                            <p className="text-gray-600 text-xs md:text-sm">Classic White</p>
+                                                            <p className="font-bold text-sm md:text-base">{(120 + index * 10).toFixed(2)}DT</p>
+                                                        </div>
+                                                    </CardContent>
+                                                </Link>
                                             </Card>
                                         </div>
                                     </CarouselItem>
