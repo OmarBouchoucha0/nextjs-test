@@ -7,9 +7,7 @@ import {
 import { FcGoogle } from "react-icons/fc"; // Google's G logo
 import {
     Dialog,
-    DialogClose,
     DialogContent,
-    DialogDescription,
     DialogFooter,
     DialogHeader,
     DialogTitle,
@@ -17,9 +15,7 @@ import {
 } from "@/components/ui/dialog"
 import {
     Sheet,
-    SheetClose,
     SheetContent,
-    SheetDescription,
     SheetFooter,
     SheetHeader,
     SheetTitle,
@@ -48,17 +44,17 @@ export default function Navbar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem className=''>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
+                                <NavigationMenuLink href="/men" className="flex items-center gap-1">
                                     Men
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem className=''>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
+                                <NavigationMenuLink href="/women" className="flex items-center gap-1">
                                     Women
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem className=''>
-                                <NavigationMenuLink href="#" className="flex items-center gap-1">
+                                <NavigationMenuLink href="/kids" className="flex items-center gap-1">
                                     Kids
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -159,9 +155,6 @@ export default function Navbar() {
                                         </div>
                                         <SheetFooter className="border-t-black">
                                             <Button type="submit">Add All To Cart</Button>
-                                            <SheetClose asChild>
-                                                <Button variant="outline">Close</Button>
-                                            </SheetClose>
                                         </SheetFooter>
                                     </SheetContent>
                                 </Sheet>
@@ -185,9 +178,6 @@ export default function Navbar() {
                                         </div>
                                         <SheetFooter className="border-t-black">
                                             <Button type="submit">Check Out</Button>
-                                            <SheetClose asChild>
-                                                <Button variant="outline">Close</Button>
-                                            </SheetClose>
                                         </SheetFooter>
                                     </SheetContent>
                                 </Sheet>
