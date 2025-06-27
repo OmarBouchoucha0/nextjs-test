@@ -3,7 +3,6 @@ import { ChevronLeft, Star, Truck, Shield } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
 
 interface Product {
     id: string;
@@ -17,10 +16,7 @@ interface Product {
     reviews: number;
 }
 
-interface Params {
-    id: string;
-}
-export default function ProductPage({ params }: { params: Params }) {
+export default function ProductPage() {
     const product: Product = {
         id: "1",
         name: 'Chuck 70s',

@@ -19,7 +19,7 @@ export default function Footer() {
                     <div className="space-y-3 md:col-span-1">
                         <h3 className="text-lg font-bold">Abous Us</h3>
                         <p className="text-gray-600 text-sm">
-                            Our mission is to give sneaker and streetwear fans, enthusiasts and the curious the chance to buy their favourite products with complete confidence. Whether you are looking for a limited edition product, the hottest pair at the moment or the perfect piece of streetwear, you've come to the right place.
+                            Our mission is to give sneaker and streetwear fans, enthusiasts and the curious the chance to buy their favourite products with complete confidence. Whether you are looking for a limited edition product, the hottest pair at the moment or the perfect piece of streetwear, you have come to the right place.
                         </p>
                     </div>
 
